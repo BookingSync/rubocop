@@ -1601,14 +1601,14 @@ describe RuboCop::CLI, :isolated_environment do
       it 'fails with an error message' do
         create_file('.rubocop.yml', <<-END.strip_indent)
           AllCops:
-            TargetRubyVersion: 2.6
+            TargetRubyVersion: 2.7
         END
         expect(cli.run([])).to eq(2)
         expect($stderr.string.strip).to match(
-          /\AError: Unknown Ruby version 2.6 found in `TargetRubyVersion`/
+          /\AError: Unknown Ruby version 2.7 found in `TargetRubyVersion`/
         )
         expect($stderr.string.strip).to match(
-          /Known versions: 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5/
+          /Known versions: 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6/
         )
       end
     end
