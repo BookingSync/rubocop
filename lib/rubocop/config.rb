@@ -18,6 +18,7 @@ module RuboCop
     # 2.1 is the oldest officially supported Ruby version.
     DEFAULT_RUBY_VERSION = 2.1
     KNOWN_RUBIES = [1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6].freeze
+    KNOWN_RUBIES = [2.2, 2.3, 2.4, 2.5, 2.6, 2.7].freeze
     DEFAULT_RAILS_VERSION = 5.0
     OBSOLETE_COPS = {
       'Style/TrailingComma' =>

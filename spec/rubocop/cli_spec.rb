@@ -1608,7 +1608,7 @@ describe RuboCop::CLI, :isolated_environment do
           /\AError: Unknown Ruby version 2.7 found in `TargetRubyVersion`/
         )
         expect($stderr.string.strip).to match(
-          /Known versions: 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6/
+          /Supported versions: 2.2, 2.3, 2.4, 2.5, 2.6, 2.7/
         )
       end
     end

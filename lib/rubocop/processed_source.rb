@@ -133,6 +133,9 @@ module RuboCop
       when 2.6
         require 'parser/ruby26'
         Parser::Ruby26
+      when 2.7
+        require 'parser/ruby27'
+        Parser::Ruby27
       else
         raise ArgumentError, "Unknown Ruby version: #{ruby_version.inspect}"
       end
